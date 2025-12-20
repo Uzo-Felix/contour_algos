@@ -1,0 +1,119 @@
+{
+  "timestamp": "2025-12-28T03:02:56.022Z",
+  "results": [
+    {
+      "grid": {
+        "rows": 120,
+        "cols": 240,
+        "points": 28800
+      },
+      "levels": {
+        "count": 1,
+        "step": 1000,
+        "range": [
+          987.7153816953034,
+          987.7153816953034
+        ]
+      },
+      "conrec": {
+        "time": 7.881599000655115,
+        "segments": 0,
+        "raw": []
+      },
+      "gluing": {
+        "time": 0.1049849996343255,
+        "isolines": 0,
+        "raw": []
+      },
+      "total": 7.98658400028944,
+      "name": "Large step (sparse)"
+    },
+    {
+      "grid": {
+        "rows": 120,
+        "cols": 240,
+        "points": 28800
+      },
+      "levels": {
+        "count": 1,
+        "step": 500,
+        "range": [
+          987.5465894585411,
+          987.5465894585411
+        ]
+      },
+      "conrec": {
+        "time": 5.719368999823928,
+        "segments": 0,
+        "raw": []
+      },
+      "gluing": {
+        "time": 0.01205000001937151,
+        "isolines": 0,
+        "raw": []
+      },
+      "total": 5.731418999843299,
+      "name": "Medium step"
+    },
+    {
+      "grid": {
+        "rows": 120,
+        "cols": 240,
+        "points": 28800
+      },
+      "levels": {
+        "count": 1,
+        "step": 250,
+        "range": [
+          987.5986110741553,
+          987.5986110741553
+        ]
+      },
+      "conrec": {
+        "time": 6.484314000234008,
+        "segments": 0,
+        "raw": []
+      },
+      "gluing": {
+        "time": 0.010419999249279499,
+        "isolines": 0,
+        "raw": []
+      },
+      "total": 6.494733999483287,
+      "name": "Fine step"
+    },
+    {
+      "grid": {
+        "rows": 120,
+        "cols": 240,
+        "points": 28800
+      },
+      "levels": {
+        "count": 1,
+        "step": 100,
+        "range": [
+          987.7770727977262,
+          987.7770727977262
+        ]
+      },
+      "conrec": {
+        "time": 1.545185999944806,
+        "segments": 0,
+        "raw": []
+      },
+      "gluing": {
+        "time": 0.012090999633073807,
+        "isolines": 0,
+        "raw": []
+      },
+      "total": 1.55727699957788,
+      "name": "Very fine step (dense)"
+    }
+  ],
+  "summary": {
+    "totalTests": 4,
+    "averageTime": "5.44ms",
+    "totalSegments": 0,
+    "totalIsolines": 0
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "timestamp": "2025-12-28T02:52:21.936Z",
+  "title": "Spatial Index Comparison: Bucket Grid vs R-Tree",
+  "objective": "Validate 30-34% optimization claimed in Rodriges Zalipynis (2011)",
+  "results": [
+    {
+      "testCase": "Small grid (sparse)",
+      "gridSize": "120×60",
+      "levels": 1,
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 0,
+        "isolines": 0,
+        "timing": {
+          "conrec": 5.433508000336587,
+          "index": 0.1489070001989603,
+          "gluing": 0.07588799949735403,
+          "total": 5.664478000253439
+        },
+        "stats": {
+          "indexStats": null,
+          "reduction": "N/A"
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 0,
+        "isolines": 0,
+        "timing": {
+          "conrec": 4.6904919994995,
+          "index": 0.2384319994598627,
+          "gluing": 0.006895999424159527,
+          "total": 4.951101999729872
+        },
+        "stats": {
+          "indexStats": {
+            "size": 0,
+            "depth": 1,
+            "avgFanout": 0
+          },
+          "reduction": "N/A"
+        }
+      },
+      "comparison": {
+        "speedup": 0.87,
+        "timeDiff": -0.7133760005235672,
+        "percentDiff": -14.408428680372337
+      }
+    },
+    {
+      "testCase": "Medium grid (typical)",
+      "gridSize": "240×120",
+      "levels": 1,
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 0,
+        "isolines": 0,
+        "timing": {
+          "conrec": 7.339410999789834,
+          "index": 0.0114120002835989,
+          "gluing": 0.004935000091791153,
+          "total": 7.366227000020444
+        },
+        "stats": {
+          "indexStats": null,
+          "reduction": "N/A"
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 0,
+        "isolines": 0,
+        "timing": {
+          "conrec": 1.802780999802053,
+          "index": 0.00597000028938055,
+          "gluing": 0.003899000585079193,
+          "total": 1.823904000222683
+        },
+        "stats": {
+          "indexStats": {
+            "size": 0,
+            "depth": 1,
+            "avgFanout": 0
+          },
+          "reduction": "N/A"
+        }
+      },
+      "comparison": {
+        "speedup": 0.25,
+        "timeDiff": -5.542322999797761,
+        "percentDiff": -303.8714208160677
+      }
+    },
+    {
+      "testCase": "Large grid (dense)",
+      "gridSize": "240×120",
+      "levels": 1,
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 0,
+        "isolines": 0,
+        "timing": {
+          "conrec": 1.7088719997555017,
+          "index": 0.027900999411940575,
+          "gluing": 0.005123000591993332,
+          "total": 1.9144419999793172
+        },
+        "stats": {
+          "indexStats": null,
+          "reduction": "N/A"
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 0,
+        "isolines": 0,
+        "timing": {
+          "conrec": 1.0197930000722408,
+          "index": 0.00787699967622757,
+          "gluing": 0.00415400043129921,
+          "total": 1.035250000655651
+        },
+        "stats": {
+          "indexStats": {
+            "size": 0,
+            "depth": 1,
+            "avgFanout": 0
+          },
+          "reduction": "N/A"
+        }
+      },
+      "comparison": {
+        "speedup": 0.54,
+        "timeDiff": -0.8791919993236661,
+        "percentDiff": -84.92557341384696
+      }
+    }
+  ],
+  "analysis": {
+    "averageSpeedup": "0.55",
+    "minSpeedup": "0.25",
+    "maxSpeedup": "0.87",
+    "conclusion": "R-Tree is 1.81x FASTER than Bucket Grid (unexpected result)",
+    "paperClaim": "R-Tree: 30-34% of total time is index construction",
+    "findings": [
+      "△ Moderate speedup difference (44.7%)",
+      "Index construction accounts for ~4.8% of R-Tree total time",
+      "Gluing queries dominate overall execution time (0.1% of R-Tree)"
+    ]
+  }
+}

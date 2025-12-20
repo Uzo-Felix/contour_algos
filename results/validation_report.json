@@ -1,0 +1,87 @@
+{
+  "timestamp": "2025-12-28T02:21:42.156Z",
+  "tests": [
+    {
+      "name": "CONREC Segment Generation",
+      "grid": "3x3",
+      "levels": 3,
+      "segmentsGenerated": 6,
+      "errorsFound": 0,
+      "status": "PASS",
+      "details": "All segments valid"
+    },
+    {
+      "name": "Spatial Index Performance",
+      "indexBuildTime": "0.17ms",
+      "segmentsIndexed": 6,
+      "searchesPerformed": 6,
+      "avgSearchTime": "0.0560ms",
+      "avgNeighborsFound": "1.5",
+      "status": "PASS"
+    },
+    {
+      "name": "Segment Gluing & Topology",
+      "gluingTime": "0.47ms",
+      "isolinesProduced": 3,
+      "closedIsolines": 0,
+      "openIsolines": 3,
+      "closureRate": "0.0%",
+      "reductionRatio": "2.0x",
+      "errorsFound": 0,
+      "status": "WARN",
+      "details": "Topology verified"
+    },
+    {
+      "name": "Numerical Stability",
+      "testType": "Near-equal values",
+      "pointsProcessed": 0,
+      "validPoints": 0,
+      "nanPoints": 0,
+      "stabilityScore": "NaN%",
+      "status": "PASS"
+    },
+    {
+      "name": "Performance Scaling",
+      "results": [
+        {
+          "gridSize": "30×30",
+          "cells": 900,
+          "segments": 222,
+          "isolines": 5,
+          "conrecMs": "1.38",
+          "gluingMs": "2.89",
+          "totalMs": "4.27"
+        },
+        {
+          "gridSize": "60×60",
+          "cells": 3600,
+          "segments": 467,
+          "isolines": 4,
+          "conrecMs": "7.95",
+          "gluingMs": "1.63",
+          "totalMs": "9.57"
+        },
+        {
+          "gridSize": "120×120",
+          "cells": 14400,
+          "segments": 947,
+          "isolines": 4,
+          "conrecMs": "6.09",
+          "gluingMs": "4.41",
+          "totalMs": "10.50"
+        },
+        {
+          "gridSize": "240×240",
+          "cells": 57600,
+          "segments": 1906,
+          "isolines": 5,
+          "conrecMs": "4.77",
+          "gluingMs": "5.51",
+          "totalMs": "10.29"
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "summary": {}
+}

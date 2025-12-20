@@ -1,0 +1,141 @@
+{
+  "timestamp": "2025-12-28T02:22:22.533Z",
+  "title": "Spatial Index Optimization Comparison",
+  "description": "Comparing original grid-based index vs O(1) bucket grid optimization",
+  "results": [
+    {
+      "gridSize": "60×120",
+      "cells": 7200,
+      "levels": 5,
+      "segments": 761,
+      "conrecTime": 7.264719999860972,
+      "original": {
+        "algorithm": "Original SpatialIndex",
+        "indexBuildTime": 1.2762529999017715,
+        "glueTime": 7.404496000148356,
+        "totalTime": 8.744286999572068,
+        "isolines": 5,
+        "indexStats": {
+          "buckets": 879
+        }
+      },
+      "optimized": {
+        "algorithm": "Optimized SpatialIndexOptimized",
+        "indexBuildTime": 2.0834570000879467,
+        "glueTime": 2.8190000001341105,
+        "totalTime": 4.986659000162035,
+        "isolines": 5,
+        "indexStats": {
+          "totalBuckets": 879,
+          "totalSegments": 1639,
+          "bucketsWithSegments": 879,
+          "avgSegmentsPerBucket": "1.86",
+          "maxSegmentsInBucket": 3,
+          "minSegmentsInBucket": 1,
+          "distribution": {
+            "1": 235,
+            "2": 528,
+            "3": 116
+          }
+        }
+      },
+      "speedup": 1.75,
+      "improvement": 43
+    },
+    {
+      "gridSize": "120×240",
+      "cells": 28800,
+      "levels": 10,
+      "segments": 3066,
+      "conrecTime": 12.589918999932706,
+      "original": {
+        "algorithm": "Original SpatialIndex",
+        "indexBuildTime": 1.100546000059694,
+        "glueTime": 12.202351999934763,
+        "totalTime": 13.330273000057787,
+        "isolines": 10,
+        "indexStats": {
+          "buckets": 3280
+        }
+      },
+      "optimized": {
+        "algorithm": "Optimized SpatialIndexOptimized",
+        "indexBuildTime": 6.541524000000209,
+        "glueTime": 7.25148699991405,
+        "totalTime": 13.844285999890417,
+        "isolines": 10,
+        "indexStats": {
+          "totalBuckets": 3280,
+          "totalSegments": 6614,
+          "bucketsWithSegments": 3280,
+          "avgSegmentsPerBucket": "2.02",
+          "maxSegmentsInBucket": 7,
+          "minSegmentsInBucket": 1,
+          "distribution": {
+            "1": 961,
+            "2": 1590,
+            "3": 479,
+            "4": 230,
+            "5": 5,
+            "6": 14,
+            "7": 1
+          }
+        }
+      },
+      "speedup": 0.96,
+      "improvement": -3.9
+    },
+    {
+      "gridSize": "240×480",
+      "cells": 115200,
+      "levels": 15,
+      "segments": 9215,
+      "conrecTime": 34.79447299987078,
+      "original": {
+        "algorithm": "Original SpatialIndex",
+        "indexBuildTime": 4.806140000000596,
+        "glueTime": 22.94963499996811,
+        "totalTime": 27.773080999962986,
+        "isolines": 15,
+        "indexStats": {
+          "buckets": 9436
+        }
+      },
+      "optimized": {
+        "algorithm": "Optimized SpatialIndexOptimized",
+        "indexBuildTime": 14.065398000180721,
+        "glueTime": 17.234548000153154,
+        "totalTime": 31.31750899972394,
+        "isolines": 15,
+        "indexStats": {
+          "totalBuckets": 9436,
+          "totalSegments": 19875,
+          "bucketsWithSegments": 9436,
+          "avgSegmentsPerBucket": "2.11",
+          "maxSegmentsInBucket": 9,
+          "minSegmentsInBucket": 1,
+          "distribution": {
+            "1": 2885,
+            "2": 4439,
+            "3": 1438,
+            "4": 234,
+            "5": 6,
+            "6": 318,
+            "7": 5,
+            "8": 110,
+            "9": 1
+          }
+        }
+      },
+      "speedup": 0.89,
+      "improvement": -12.8
+    }
+  ],
+  "summary": {
+    "testCases": 3,
+    "avgSpeedup": "1.20",
+    "avgImprovement": "8.8%",
+    "paperClaim": "30-34% improvement (from Table 8 of paper)",
+    "actualResult": "See individual test cases above"
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "timestamp": "2025-12-28T11:32:47.004Z",
+  "title": "ERA5 Real Data Benchmark: R-Tree vs Bucket Grid",
+  "summary": {
+    "gridSize": "150×100",
+    "pressureRange": "100229.81-100777.31 hPa",
+    "levels": 10,
+    "avgSpeedup": "1.09",
+    "totalBucketTime": "100.42",
+    "totalRTreeTime": "101.15"
+  },
+  "results": [
+    {
+      "level": "100279.58",
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 664,
+        "isolines": 6,
+        "timing": {
+          "conrec": 13.329610999673605,
+          "index": 2.32409100048244,
+          "gluing": 10.53668599948287,
+          "total": 26.214013999328017
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 664,
+        "isolines": 6,
+        "timing": {
+          "conrec": 10.187725000083447,
+          "index": 8.458644000813365,
+          "gluing": 3.788766000419855,
+          "total": 22.46368999965489
+        },
+        "stats": {
+          "size": 664,
+          "depth": 2,
+          "avgFanout": 3
+        }
+      },
+      "speedup": 0.86,
+      "timeDiff": -3.750323999673128,
+      "percentDiff": -16.7
+    },
+    {
+      "level": "100329.36",
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 1436,
+        "isolines": 10,
+        "timing": {
+          "conrec": 7.6568829994648695,
+          "index": 3.1271870005875826,
+          "gluing": 8.170524999499321,
+          "total": 18.973815999925137
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 1436,
+        "isolines": 10,
+        "timing": {
+          "conrec": 1.0865209996700287,
+          "index": 7.409879000857472,
+          "gluing": 5.795969000086188,
+          "total": 14.31101500056684
+        },
+        "stats": {
+          "size": 1436,
+          "depth": 2,
+          "avgFanout": 3
+        }
+      },
+      "speedup": 0.75,
+      "timeDiff": -4.662800999358296,
+      "percentDiff": -32.6
+    },
+    {
+      "level": "100379.13",
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 2110,
+        "isolines": 13,
+        "timing": {
+          "conrec": 0.9748550001531839,
+          "index": 1.0622380003333092,
+          "gluing": 6.854509999975562,
+          "total": 8.93206899985671
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 2110,
+        "isolines": 13,
+        "timing": {
+          "conrec": 1.6874120011925697,
+          "index": 2.6271179988980293,
+          "gluing": 7.240166999399662,
+          "total": 11.562753999605775
+        },
+        "stats": {
+          "size": 2110,
+          "depth": 2,
+          "avgFanout": 2.5
+        }
+      },
+      "speedup": 1.29,
+      "timeDiff": 2.6306849997490644,
+      "percentDiff": 22.8
+    },
+    {
+      "level": "100428.90",
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 3018,
+        "isolines": 20,
+        "timing": {
+          "conrec": 1.1344030015170574,
+          "index": 1.3763200007379055,
+          "gluing": 14.412553999572992,
+          "total": 16.92844600044191
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 3018,
+        "isolines": 20,
+        "timing": {
+          "conrec": 0.6933650001883507,
+          "index": 1.4370969999581575,
+          "gluing": 17.558080999180675,
+          "total": 19.69293799996376
+        },
+        "stats": {
+          "size": 3018,
+          "depth": 2,
+          "avgFanout": 2.75
+        }
+      },
+      "speedup": 1.16,
+      "timeDiff": 2.7644919995218515,
+      "percentDiff": 14
+    },
+    {
+      "level": "100478.67",
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 2869,
+        "isolines": 19,
+        "timing": {
+          "conrec": 1.7622290011495352,
+          "index": 1.0486590005457401,
+          "gluing": 5.148423001170158,
+          "total": 7.965369001030922
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 2869,
+        "isolines": 19,
+        "timing": {
+          "conrec": 0.7479600012302399,
+          "index": 0.9325680006295443,
+          "gluing": 7.99316400103271,
+          "total": 9.677604001015425
+        },
+        "stats": {
+          "size": 2869,
+          "depth": 2,
+          "avgFanout": 2.5
+        }
+      },
+      "speedup": 1.21,
+      "timeDiff": 1.7122349999845028,
+      "percentDiff": 17.7
+    },
+    {
+      "level": "100528.45",
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 2169,
+        "isolines": 14,
+        "timing": {
+          "conrec": 0.7091409992426634,
+          "index": 0.6661520004272461,
+          "gluing": 3.911360001191497,
+          "total": 5.290287999436259
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 2169,
+        "isolines": 14,
+        "timing": {
+          "conrec": 0.5845400001853704,
+          "index": 0.8453119993209839,
+          "gluing": 6.25420399941504,
+          "total": 7.687416998669505
+        },
+        "stats": {
+          "size": 2169,
+          "depth": 2,
+          "avgFanout": 2.75
+        }
+      },
+      "speedup": 1.45,
+      "timeDiff": 2.397128999233246,
+      "percentDiff": 31.2
+    },
+    {
+      "level": "100578.22",
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 1408,
+        "isolines": 9,
+        "timing": {
+          "conrec": 1.1293340008705854,
+          "index": 0.6580459997057915,
+          "gluing": 4.3535620011389256,
+          "total": 6.147114001214504
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 1408,
+        "isolines": 9,
+        "timing": {
+          "conrec": 0.8757789991796017,
+          "index": 0.8031869996339083,
+          "gluing": 4.277207000181079,
+          "total": 5.9654510002583265
+        },
+        "stats": {
+          "size": 1408,
+          "depth": 2,
+          "avgFanout": 2.25
+        }
+      },
+      "speedup": 0.97,
+      "timeDiff": -0.1816630009561777,
+      "percentDiff": -3
+    },
+    {
+      "level": "100627.99",
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 906,
+        "isolines": 6,
+        "timing": {
+          "conrec": 0.9025879986584187,
+          "index": 0.4506170004606247,
+          "gluing": 3.843623999506235,
+          "total": 5.201961999759078
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 906,
+        "isolines": 6,
+        "timing": {
+          "conrec": 0.7689549997448921,
+          "index": 0.4356030002236366,
+          "gluing": 2.8949110005050898,
+          "total": 4.104092000052333
+        },
+        "stats": {
+          "size": 906,
+          "depth": 2,
+          "avgFanout": 2.25
+        }
+      },
+      "speedup": 0.79,
+      "timeDiff": -1.0978699997067451,
+      "percentDiff": -26.8
+    },
+    {
+      "level": "100677.76",
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 604,
+        "isolines": 4,
+        "timing": {
+          "conrec": 0.7926940005272627,
+          "index": 0.29237000085413456,
+          "gluing": 1.8351599983870983,
+          "total": 2.9242230001837015
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 604,
+        "isolines": 4,
+        "timing": {
+          "conrec": 0.8115299995988607,
+          "index": 0.4334160014986992,
+          "gluing": 1.9207990001887083,
+          "total": 3.171500999480486
+        },
+        "stats": {
+          "size": 604,
+          "depth": 2,
+          "avgFanout": 3
+        }
+      },
+      "speedup": 1.08,
+      "timeDiff": 0.2472779992967844,
+      "percentDiff": 7.8
+    },
+    {
+      "level": "100727.54",
+      "bucketGrid": {
+        "algorithm": "Bucket Grid",
+        "segments": 302,
+        "isolines": 2,
+        "timing": {
+          "conrec": 0.698140000924468,
+          "index": 0.1663770005106926,
+          "gluing": 0.9793260004371405,
+          "total": 1.846899000927806
+        }
+      },
+      "rtree": {
+        "algorithm": "R-Tree",
+        "segments": 302,
+        "isolines": 2,
+        "timing": {
+          "conrec": 0.6899000015109777,
+          "index": 0.830935999751091,
+          "gluing": 0.9898910000920296,
+          "total": 2.5141790006309748
+        },
+        "stats": {
+          "size": 302,
+          "depth": 2,
+          "avgFanout": 2.75
+        }
+      },
+      "speedup": 1.36,
+      "timeDiff": 0.6672799997031689,
+      "percentDiff": 26.5
+    }
+  ]
+}
