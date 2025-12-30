@@ -1,0 +1,59 @@
+{
+  "name": "isolines-js",
+  "version": "1.0.0",
+  "description": "JavaScript implementation of the three-stage isoline construction method with empirical validation and 62.7% Bucket Grid optimization",
+  "main": "src/isolineBuilder.js",
+  "scripts": {
+    "test": "node tests/validation-tests.js",
+    "benchmark": "node benchmarks/benchmark.js",
+    "benchmark:era5": "node benchmarks/benchmark-era5.js",
+    "benchmark:compare": "node benchmarks/benchmark-comparison.js",
+    "all-tests": "npm run test && npm run benchmark:compare"
+  },
+  "keywords": [
+    "isolines",
+    "contour",
+    "visualization",
+    "geospatial",
+    "climate",
+    "meteorology",
+    "CONREC",
+    "spatial-indexing",
+    "r-tree",
+    "bucket-grid"
+  ],
+  "author": "Onyekwelu Uzochukwu Felix",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/isolines-js"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/isolines-js/issues"
+  },
+  "homepage": "https://github.com/yourusername/isolines-js#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "rbush": "^3.14.0"
+  },
+  "devDependencies": {},
+  "files": [
+    "src/",
+    "tests/",
+    "benchmarks/",
+    "results/",
+    "docs/",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "exports": {
+    ".": "./src/isolineBuilder.js",
+    "./conrec": "./src/conrec.js",
+    "./spatialIndex": "./src/spatialIndex.js",
+    "./spatialIndex-rtree": "./src/spatialIndex-rtree.js",
+    "./isolineBuilder": "./src/isolineBuilder.js"
+  }
+}
